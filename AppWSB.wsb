@@ -1,0 +1,33 @@
+<Configuration>
+    <vGPU>Enable</vGPU>
+    <Networking>Disable</Networking>
+    <AudioInput>Disable</AudioInput>
+    <VideoInput>Disable</VideoInput>
+    <ProtectedClient>Enable</ProtectedClient>
+    <PrinterRedirection>Disable</PrinterRedirection>
+    <ClipboardRedirection>Enable</ClipboardRedirection>
+    <MemoryInMB>8192</MemoryInMB>
+    <LogonCommand>
+        <Command>powershell -executionpolicy unrestricted -file "C:\scripts\startup.ps1"</Command>
+    </LogonCommand>
+    <MappedFolders>
+        <!-- Shared -->
+        <MappedFolder>
+            <HostFolder>D:\shared\AppWSB</HostFolder>
+            <SandboxFolder>C:\Users\WDAGUtilityAccount\Desktop\shared</SandboxFolder>
+            <ReadOnly>false</ReadOnly>
+        </MappedFolder>
+        <!-- Programs -->
+        <MappedFolder>
+            <HostFolder>D:\VMs\WindowsSandbox\AppWSB\programs</HostFolder>
+            <SandboxFolder>C:\programs\</SandboxFolder>
+            <ReadOnly>false</ReadOnly>
+        </MappedFolder>
+        <!-- Scripts -->
+        <MappedFolder>
+            <HostFolder>D:\VMs\WindowsSandbox\AppWSB\scripts</HostFolder>
+            <SandboxFolder>C:\scripts</SandboxFolder>
+            <ReadOnly>true</ReadOnly>
+        </MappedFolder>
+    </MappedFolders>
+</Configuration>
