@@ -9,7 +9,8 @@ Stop-Process -processname explorer
 reg import C:\scripts\autohide-taskbar.reg
 
 # CREATE APP SHORTCUT ON DESKTOP
-$TARGET='C:\programs\App\app.exe'
+$APPINPROGRAMS='App\app.exe' # Before using: replace this with your app executable's actual path, starting from the root of the "programs" mapped folder.
+$TARGET="C:\programs\$APPINPROGRAMS"
 $SHORTCUT='C:\Users\WDAGUtilityAccount\Desktop\App.lnk'
 $ws = New-Object -ComObject WScript.Shell; $s = $ws.CreateShortcut($SHORTCUT); $S.TargetPath = $TARGET; $S.Save()
 

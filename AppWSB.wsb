@@ -10,6 +10,7 @@
     <LogonCommand>
         <Command>powershell -executionpolicy unrestricted -file "C:\scripts\startup.ps1"</Command>
     </LogonCommand>
+    <!-- Before using: replace all HostFolder paths below with the right ones for your machine -->
     <MappedFolders>
         <!-- Shared -->
         <MappedFolder>
