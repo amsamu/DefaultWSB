@@ -1,5 +1,5 @@
 # DefaultWSB
-Simple folder structure, config file and startup script to serve as template for Windows Sandox instances. This configuration is particular is thought to be used when wanting to use WSB as a way to run a single app isolated from the rest of your system.
+Simple folder structure, config file and startup script to serve as template for Windows Sandox instances. This configuration's focus is to run a single app within WSB so that it is isolated from the rest of your system.
 
 ## Before using
 Don't forget to set the right `HostFolder` paths for your machine in the AppWSB.wsb file, as well as the right `$APPINPROGRAMS` path for your app's binary in the [`startup.ps1`](/scripts/startup.ps1) file.
